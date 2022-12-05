@@ -2,6 +2,7 @@ const express= require('express');
 const app=express();
 const bodyPerser= require('body-parser');
 const multer= require('multer');
+require("dotenv").config();
 
 
 //middlewares
@@ -38,6 +39,10 @@ app.post('/four', function (req,res){
     let password= req.header('password');
     res.send('User Name: '+userName+" "+'Password: '+password);
 })
+
+
+
+
 
 
 //sec-b
@@ -77,7 +82,8 @@ app.post('/five', function (req,res){
 
 
 
+const port = process.env.PORT || 8020;
 
-app.listen(8020,function (){
-    console.log('Server running successfull');
-})
+app.listen(port,()=>{
+    console.log(`App is running on port ${port}`);
+});
