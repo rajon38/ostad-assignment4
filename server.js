@@ -5,9 +5,16 @@ const multer= require('multer');
 require("dotenv").config();
 
 
+
 //middlewares
 app.use(express.static('public'));
 app.use(bodyPerser.json());
+
+
+
+
+
+
 
 
 
@@ -45,8 +52,8 @@ app.post('/four', function (req,res){
 
 
 
-//sec-b
-//jpg png file upload
+// sec-b
+// jpg png file upload
 const storage= multer.diskStorage({
     destination: function (req,file,cb){
         cb(null, "./uploads")
