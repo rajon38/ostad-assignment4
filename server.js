@@ -86,7 +86,8 @@ app.post('/five', function (req,res){
     })
 })
 
-
+// sec-c
+// download from application directory
 const {downloads}=require("./application/download");
 app.get('/six',downloads);
 
