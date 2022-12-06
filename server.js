@@ -87,6 +87,9 @@ app.post('/five', function (req,res){
 })
 
 
+const {downloads}=require("./application/download");
+app.get('/six',downloads);
+
 
 
 const port = process.env.PORT || 8020;
