@@ -12,12 +12,6 @@ app.use(bodyPerser.json());
 
 
 
-
-
-
-
-
-
 //sec-a
 //query
 app.post('/one', function (req,res){
@@ -46,9 +40,6 @@ app.post('/four', function (req,res){
     let password= req.header('password');
     res.send('User Name: '+userName+" "+'Password: '+password);
 })
-
-
-
 
 
 
@@ -86,13 +77,15 @@ app.post('/five', function (req,res){
     })
 })
 
+
+
 // sec-c
 // download from application directory
 const {downloads}=require("./application/download");
 app.get('/six',downloads);
 
 
-
+//server
 const port = process.env.PORT || 8020;
 
 app.listen(port,()=>{
